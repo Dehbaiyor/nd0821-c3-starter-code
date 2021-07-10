@@ -7,17 +7,17 @@ from .ml.model import *
 @pytest.fixture
 def data():
     """ Load initial data """
-    return pd.read_csv("data/census_nospaces.csv")
+    return pd.read_csv("./data/census_nospaces.csv")
 
 @pytest.fixture
 def X_test():
     """ Load test data """
-    return pd.read_csv("data/X_test.csv")
+    return pd.read_csv("./data/X_test.csv")
 
 @pytest.fixture
 def model():
     """ Load a pretrained model """
-    return joblib.load("model/model.pkl")
+    return joblib.load("./model/model.pkl")
 
 def test_preprocess_data(data):
     """ Check to see if there are no . """
@@ -46,7 +46,7 @@ def test_model(model):
     
 def test_inference(X_test):
     try:
-        model = joblib.load("model/model.pkl")
+        model = joblib.load("./model/model.pkl")
         inference(model, X_test)
     except:
         assert False
