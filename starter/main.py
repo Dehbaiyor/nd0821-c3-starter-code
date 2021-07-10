@@ -5,8 +5,8 @@ from typing import List
 import numpy as np
 import pandas as pd
 import joblib
-from starter.starter.ml.model import *
-from starter.starter.ml.data import *
+from starter.ml.model import *
+from starter.ml.data import *
 
 class Input(BaseModel):
     age : int
