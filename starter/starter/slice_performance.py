@@ -1,5 +1,7 @@
 import pandas as pd
 import joblib
+from ml.data import process_data
+from ml.model import *
 
 df = pd.read_csv("../data/census_nospaces.csv")
 model = joblib.load("../model/model.pkl") 
