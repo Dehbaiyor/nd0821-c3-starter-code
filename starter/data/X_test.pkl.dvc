@@ -1,0 +1,4 @@
+outs:
+- md5: cb1c7f75b48ec3562e0ebd3be92e0a19
+  size: 5627418
+  path: X_test.pkl

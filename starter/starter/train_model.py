@@ -6,6 +6,7 @@ from ml.data import process_data
 from ml.model import *
 import pandas as pd
 import joblib
+import numpy as np
 
 # Add code to load in the data.
 data = pd.read_csv("../data/census_nospaces.csv")
@@ -33,10 +34,10 @@ X_test, y_test, encoder, lb = process_data(
     encoder = encoder, lb = lb
 )
 
-pd.DataFrame(X_train).to_csv('../data/X_train.csv', index = False)
-pd.DataFrame(X_test).to_csv('../data/X_test.csv', index = False)
-pd.DataFrame(y_train).to_csv('../data/y_train.csv', index = False)
-pd.DataFrame(y_test).to_csv('../data/y_test.csv', index = False)
+joblib.dump(X_train, '../data/X_train.pkl')
+joblib.dump(X_test, '../data/X_test.pkl')
+joblib.dump(y_train, '../data/y_train.pkl')
+joblib.dump(y_test, '../data/y_test.pkl')
 
 # Train and save a model.
 model = train_model(X_train, y_train)

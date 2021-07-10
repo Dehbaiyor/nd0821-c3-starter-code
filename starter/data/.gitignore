@@ -5,3 +5,7 @@
 /X_train.csv
 /y_test.csv
 /y_train.csv
+/X_test.pkl
+/X_train.pkl
+/y_test.pkl
+/y_train.pkl

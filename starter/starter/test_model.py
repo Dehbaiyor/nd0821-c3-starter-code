@@ -12,7 +12,7 @@ def data():
 @pytest.fixture
 def X_test():
     """ Load test data """
-    return pd.read_csv("./starter/data/X_test.csv")
+    return joblib.load("./starter/data/X_test.pkl")
 
 @pytest.fixture
 def model():
