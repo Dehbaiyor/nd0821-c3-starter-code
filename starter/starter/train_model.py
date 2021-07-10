@@ -33,10 +33,10 @@ X_test, y_test, encoder, lb = process_data(
     encoder = encoder, lb = lb
 )
 
-X_train.to_csv('../data/X_train.csv', index = False)
-X_test.to_csv('../data/X_test.csv', index = False)
-y_train.to_csv('../data/y_train.csv', index = False)
-y_test.to_csv('../data/y_test.csv', index = False)
+pd.DataFrame(X_train).to_csv('../data/X_train.csv', index = False)
+pd.DataFrame(X_test).to_csv('../data/X_test.csv', index = False)
+pd.DataFrame(y_train).to_csv('../data/y_train.csv', index = False)
+pd.DataFrame(y_test).to_csv('../data/y_test.csv', index = False)
 
 # Train and save a model.
 model = train_model(X_train, y_train)

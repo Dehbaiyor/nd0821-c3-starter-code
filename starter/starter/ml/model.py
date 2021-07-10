@@ -29,7 +29,7 @@ def train_model(X_train, y_train):
                                    param_distributions = param_grid, 
                                    n_iter = 50, 
                                    cv = 3, 
-                                   verbose=2, 
+                                   verbose=1, 
                                    random_state=42)
     model.fit(X_train, y_train)
     return model
