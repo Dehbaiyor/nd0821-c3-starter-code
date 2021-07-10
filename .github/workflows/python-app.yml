@@ -45,6 +45,6 @@ jobs:
     - name: Data and Model Versioning
       run: |
         dvc pull
- #   - name: Test with pytest
-  #    run: |
-   #     pytest -k
+    - name: Test with pytest
+      run: |
+        pytest -vv
