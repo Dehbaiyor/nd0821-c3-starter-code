@@ -1,4 +1,6 @@
 [core]
-    remote = myremote
+    remote = udacityremote
 ['remote "myremote"']
     url = gdrive://1s_st09_RxsZo3yBO1FrW7ilyPntjQ0mC/dvcstore
+['remote "udacityremote"']
+    url = s3://mlopsc3/dvc/
