@@ -17,20 +17,20 @@ if "DYNO" in os.environ and os.path.isdir(".dvc"):
 
     
 class Input(BaseModel):
-    age : int
-    workclass : str
-    fnlgt : int
-    education : str
-    education_num : int
-    marital_status : str
-    occupation : str
-    relationship : str
-    race : str
-    sex : str
-    capital_gain : int
-    capital_loss : int
-    hours_per_week : int
-    native_country : str
+    age : int = 22
+    workclass : str = 'Private'
+    fnlgt : int = 201490
+    education : str = 'HS-grad'
+    education_num : int = 9
+    marital_status : str ='Never-married' 
+    occupation : str = 'Adm-clerical'
+    relationship : str = 'Own-child'
+    race : str = 'White'
+    sex : str = 'Male'
+    capital_gain : int = 0
+    capital_loss : int = 0
+    hours_per_week : int = 20
+    native_country : str = 'United States'
 
 class Output(BaseModel):
     prediction: str
