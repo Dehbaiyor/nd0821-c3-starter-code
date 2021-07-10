@@ -10,11 +10,6 @@ def data():
     return pd.read_csv("./starter/data/census_nospaces.csv")
 
 @pytest.fixture
-def X_test():
-    """ Load test data """
-    return pd.read_csv("./starter/data/X_test.csv")
-
-@pytest.fixture
 def model():
     """ Load a pretrained model """
     return joblib.load("./starter/model/model.pkl")
@@ -44,10 +39,11 @@ def test_model(model):
         assert False
     assert True
     
-def test_inference(X_test):
+def test_inference(data):
     try:
         model = joblib.load("./starter/model/model.pkl")
-        inference(model, X_test)
+        X, _, _, _ = process_data(data, categorical_features=cat_features, label="salary", training=True)
+        inference(model, X)
     except:
         assert False
     assert True 
