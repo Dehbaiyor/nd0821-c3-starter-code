@@ -24,8 +24,8 @@ For additional information see the Model Card paper: https://arxiv.org/pdf/1810.
 - It is not for actual use case in the real world
 
 ## Factors
-- The moodel not trained for actual use case in the world
-- There wasno bias/ fairness consideration
+- The model not trained for actual use case in the world
+- There was no bias/ fairness consideration
 
 ## Training Data
 - The model source is https://archive.ics.uci.edu/ml/datasets/census+income
@@ -40,6 +40,17 @@ The metrics used are:
   - fbeta
   - precision
   - recall
+  
+The training set metrics for the trained model is:
+  - Precision: 0.8041
+  - Recall: 0.6219
+  - Fbeta: 0.7013
+
+The test set metrics for the trained model is:
+  - Precision: 0.7994
+  - Recall: 0.6314
+  - Fbeta: 0.7055
+
 
 ## Ethical Considerations
 - There were no ethical considerations

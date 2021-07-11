@@ -7,6 +7,7 @@ client = TestClient(app)
 def test_get():
     response = client.get("/")
     assert response.status_code == 200
+    assert json.loads(response.text)["Greeting"] == "Welcome!"
 
 def test_post_gt50k():
     input_dict = {
